@@ -148,3 +148,4 @@ C:\Users\Bkav\Desktop\Webgiay\WebGiay\WebGiay\WebGiay\bin\Microsoft.CodeDom.Prov
 C:\Users\Bkav\Desktop\Webgiay\WebGiay\WebGiay\WebGiay\obj\Debug\WebGiay.csproj.CopyComplete
 C:\Users\Bkav\Desktop\Webgiay\WebGiay\WebGiay\WebGiay\obj\Debug\WebGiay.dll
 C:\Users\Bkav\Desktop\Webgiay\WebGiay\WebGiay\WebGiay\obj\Debug\WebGiay.pdb
+C:\Users\Bkav\Desktop\Webgiay\WebGiay\WebGiay\WebGiay\obj\Debug\WebGiay.csprojAssemblyReference.cache
