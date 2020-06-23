@@ -1,0 +1,52 @@
+﻿@model List<Models.EF.PRODUCT>
+
+<div class="main">
+    <div class="wrap">
+        <div class="content-bottom">
+            <div class="box1">
+                @foreach (var item in Model)
+                {
+                    <div class="col_1_of_3 span_1_of_3">
+                            <div class="view view-fifth">
+                                <div class="top_box">
+                                    <h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+                                    <p class="m_2">@item.ProductName</p>
+                                    <div class="grid_img">
+                                        <div class="css3"><img src="@item.ShowImage_1" alt="" /></div>
+                                        <div class="mask">
+                                            <div class="info">Quick View</div>
+                                        </div>
+                                    </div>
+                                    <div class="price">£ @item.ProductPrice</div>
+                                </div>
+                            </div>
+                            <ul class="list" style="background-color: #eea9a9">
+                                <li>
+                                    <img src="~/Content/images/plus.png" alt="" />
+                                    <ul class="icon1 sub-icon1 profile_img">
+                                        <li>
+                                            <a class="active-icon" href="@Url.Action("Edit","PRODUCTs",new {@id = item.ProductID },null)" style="color:black">Edit</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="list">
+                                <li>
+                                    <img src="~/Content/images/plus.png" alt="" />
+                                    <ul class="icon1 sub-icon1 profile_img">
+                                        <li>
+                                            <a class="active-icon" href="@Url.Action("Delete","PRODUCTs",new {@id = item.ProductID },null)">Delete</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                    </div>
+                }
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

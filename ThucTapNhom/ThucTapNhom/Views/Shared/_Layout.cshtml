@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Free Adidas Website Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- start menu -->
+    <link href="~/Content/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/css/form.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/css/etalage.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/megamenu.js"></script>
+    <!-- end menu -->
+    <!-- top scrolling -->
+    <script type="text/javascript" src="~/Content/js/move-top.js"></script>
+    <script type="text/javascript" src="~/Content/js/easing.js"></script>
+</head>
+<body>
+    <div class="header-top">
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html"><img src="~/Content/images/logo.png" alt="" /></a>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="register.html">Sign up & Save</a></li>
+                    <li><a href="shop.html">Home</a></li>
+                    <li><a href="login.html">About</a></li>
+                    <li><a href="checkout.html">CheckOut</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap">
+            <!-- start header menu -->
+            @RenderSection("Home", required: false)
+            @RenderSection("GiayDa", required: false)
+            @RenderSection("LifeStyle", required: false)
+            @RenderSection("All", required: false)
+            @RenderSection("Boots", required: false)
+            @RenderSection("TheThao", required: false)
+            <div class="clear"></div>
+        </div>
+    </div>
+    @RenderBody()
+    <div class="footer">
+        <div class="footer-top">
+            <div class="wrap">
+                <div class="col_1_of_footer-top span_1_of_footer-top">
+                    <ul class="f_list">
+                        <li><img src="~/Content/images/f_icon.png" alt="" /><span class="delivery">Free delivery on all orders over £100*</span></li>
+                    </ul>
+                </div>
+                <div class="col_1_of_footer-top span_1_of_footer-top">
+                    <ul class="f_list">
+                        <li><img src="~/Content/images/f_icon1.png" alt="" /><span class="delivery">Customer Service :<span class="orange"> (800) 000-2587 (freephone)</span></span></li>
+                    </ul>
+                </div>
+                <div class="col_1_of_footer-top span_1_of_footer-top">
+                    <ul class="f_list">
+                        <li><img src="~/Content/images/f_icon2.png" alt="" /><span class="delivery">Fast delivery & free returns</span></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

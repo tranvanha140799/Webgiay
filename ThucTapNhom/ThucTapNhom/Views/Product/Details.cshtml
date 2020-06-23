@@ -1,0 +1,73 @@
+﻿@model Models.EF.PRODUCT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="single">
+    <div class="wrap">
+        <div class="cont span_2_of_3">
+            <div class="labout span_1_of_a1">
+                <!-- start product_slider -->
+                <ul id="etalage" class="etalage" style="display: block; width: 314px; height: 414px;    ">
+                    <li class="etalage_thumb etalage_thumb_active thumb_1" style="display: list-item ; background-image: none;">
+                        <a href="optionallink.html">
+                            <img class="etalage_thumb_image" src="@Model.ShowImage_1" style="display: inline; width: 300px; height: 400px; opacity: 1;">
+                        </a>
+                    </li>
+                </ul>
+                <!-- end product_slider -->
+            </div>
+            <div class="cont1 span_2_of_a1">
+                <h3 class="m_3">@Model.ProductName</h3>
+                <div class="price_single">
+                    <span class="reducedfrom">$@Model.PromotionPrice</span>
+                    <span class="actual">$@Model.ProductPrice</span>
+                </div>
+                <h4 class="m_9">Select a Size</h4>
+                <ul class="options">
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="btn_form">
+                    <form>
+                        <input type="submit" value="BUY NOW" title="">
+                    </form>
+                </div>
+
+                <div class="toogle">
+                    <h3 class="m_3">Product Details</h3>
+                    <p class="m_text">@Model.ProductDescription</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+@section All
+{
+    <ul class="megamenu skyblue">
+        <li class="active grid"><a class="color1" href="@Url.Action("Index","Home")">Trang Chủ</a></li>
+        <li>
+            <a class="color4" href="@Url.Action("GiayDa","Home")">Giày Da</a>
+        </li>
+        <li>
+            <a class="color5" href="@Url.Action("GiayTheThao","Home")">Giày Thể Thao</a>
+        </li>
+        <li>
+            <a class="color6" href="@Url.Action("GiayLifeStyle","Home")">Giày Life Style</a>
+        </li>
+        <li>
+            <a class="color8" href="@Url.Action("GiayBoots","Home")">Giày Boots</a>
+        </li>
+    </ul>
+
+}
+        

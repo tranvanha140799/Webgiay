@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThucTapNhom", "ThucTapNhom\ThucTapNhom.csproj", "{7CF70314-2E90-4B82-97E1-6A306BA82061}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FA211146-96E2-4D1A-9CD4-66C7D9D6CE9F} = {FA211146-96E2-4D1A-9CD4-66C7D9D6CE9F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{FA211146-96E2-4D1A-9CD4-66C7D9D6CE9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CF70314-2E90-4B82-97E1-6A306BA82061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CF70314-2E90-4B82-97E1-6A306BA82061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF70314-2E90-4B82-97E1-6A306BA82061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF70314-2E90-4B82-97E1-6A306BA82061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA211146-96E2-4D1A-9CD4-66C7D9D6CE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA211146-96E2-4D1A-9CD4-66C7D9D6CE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA211146-96E2-4D1A-9CD4-66C7D9D6CE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA211146-96E2-4D1A-9CD4-66C7D9D6CE9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C810B58D-7379-4B6D-ACBB-0CC50B0F49B9}
+	EndGlobalSection
+EndGlobal

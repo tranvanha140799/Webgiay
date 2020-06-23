@@ -1,0 +1,94 @@
+﻿@model Models.EF.PRODUCT
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="content">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-user">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                Product information
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true)
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label>Product Name</label>
+                                            @Html.TextBoxFor(model => model.ProductName, new { @class = "form-control", placeholder = "Capuchino ...." })
+                                            @Html.ValidationMessageFor(model => model.ProductName, null, new { @class = "danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label>Product Description</label>
+                                            @Html.TextBoxFor(model => model.ProductDescription, new { @class = "form-control", placeholder = "Capuchino ...." })
+                                            @Html.ValidationMessageFor(model => model.ProductDescription, null, new { @class = "danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label>Image Link</label>
+                                            @Html.TextBoxFor(model => model.ShowImage_1, new { @class = "form-control", placeholder = "Capuchino ...." })
+                                            @Html.ValidationMessageFor(model => model.ShowImage_1, null, new { @class = "danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Category</label>
+
+                                            @Html.DropDownListFor(model => model.CategoryID, new List<SelectListItem>()
+                                            {
+                                                new SelectListItem(){Selected = true, Text = "Giày Da",Value = "1"},
+                                                new SelectListItem(){Selected = true, Text = "Giày Thể Thao",Value = "2"},
+                                                new SelectListItem(){Selected = true, Text = "Giày Life Style",Value = "3"},
+                                                new SelectListItem(){Selected = true, Text = "Giày Boots",Value = "4"},
+                                            }, new { @class = "form-control"})
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Product Pice</label>
+                                            @Html.TextBoxFor(model => model.ProductPrice, new { @class = "form-control", placeholder = "Capuchino ...." })
+                                            @Html.ValidationMessageFor(model => model.ProductPrice, null, new { @class = "danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="update ml-auto mr-auto">
+                                        <button type="submit" class="btn btn-primary btn-round">Create Product</button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
