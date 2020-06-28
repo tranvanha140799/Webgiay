@@ -133,6 +133,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\PRODUCTsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -157,6 +158,7 @@
     <Content Include="Content\images\b-arrow.png" />
     <Content Include="Content\images\banner1.jpg" />
     <Content Include="Content\images\banner2.jpg" />
+    <Content Include="Content\images\bg_44.jpg" />
     <Content Include="Content\images\border.png" />
     <Content Include="Content\images\b_star.png" />
     <Content Include="Content\images\down_arrow.png" />
@@ -234,7 +236,6 @@
     <Content Include="Areas\Admin\Views\PRODUCTs\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\PRODUCTs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\PRODUCTs\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\PRODUCTs\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -265,6 +266,7 @@
     <Content Include="Views\Home\GiayBoots.cshtml" />
     <Content Include="Views\Shared\_Product.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

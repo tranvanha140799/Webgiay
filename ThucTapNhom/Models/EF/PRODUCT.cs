@@ -13,12 +13,10 @@ namespace Models.EF
         public PRODUCT()
         {
             ORDERDETAILs = new HashSet<ORDERDETAIL>();
-            PRODUCTDETAILs = new HashSet<PRODUCTDETAIL>();
             PRODUCTIMAGEs = new HashSet<PRODUCTIMAGE>();
         }
 
-        [StringLength(20)]
-        public string ProductID { get; set; }
+        public int ProductID { get; set; }
 
         [Required]
         [StringLength(250)]
@@ -46,21 +44,14 @@ namespace Models.EF
 
         public bool? ProductStatus { get; set; }
 
-        public int? ViewCount { get; set; }
-
         public DateTime? CreatedDate { get; set; }
 
-        [Required]
-        [StringLength(20)]
-        public string CategoryID { get; set; }
+        public int CategoryID { get; set; }
 
         public virtual CATEGORY CATEGORY { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ORDERDETAIL> ORDERDETAILs { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PRODUCTDETAIL> PRODUCTDETAILs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRODUCTIMAGE> PRODUCTIMAGEs { get; set; }

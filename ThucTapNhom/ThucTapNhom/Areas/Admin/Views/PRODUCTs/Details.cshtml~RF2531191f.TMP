@@ -34,9 +34,9 @@
                 </ul>
                 <div class="clear"></div>
                     <div>
-                        <div class=" btn-outline-primary">
+                        <button class="btn-danger">
                             <a class="active-icon" href="@Url.Action("Edit","PRODUCTs",new {@id = Model.ProductID },null)" style="color:black">Edit</a>
-                        </div>
+                        </button>
                     </div>
                     <div class="btn_form">
                         <form>

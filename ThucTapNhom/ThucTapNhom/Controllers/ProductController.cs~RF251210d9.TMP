@@ -15,9 +15,9 @@ namespace ThucTapNhom.Controllers
         private ShopDbContext db = new ShopDbContext();
        
         // GET: Product/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            if (id<0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }

@@ -21,14 +21,11 @@ namespace Models.EF
         public virtual DbSet<PRODUCTDETAIL> PRODUCTDETAILs { get; set; }
         public virtual DbSet<PRODUCTIMAGE> PRODUCTIMAGEs { get; set; }
         public virtual DbSet<SIZE> SIZEs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CATEGORY>()
-                .Property(e => e.CategoryID)
-                .IsUnicode(false);
-
             modelBuilder.Entity<CUSTOMER>()
                 .HasMany(e => e.ORDERs)
                 .WithOptional(e => e.CUSTOMER)
@@ -39,18 +36,10 @@ namespace Models.EF
                 .WithOptional(e => e.ORDER)
                 .WillCascadeOnDelete();
 
-            modelBuilder.Entity<ORDERDETAIL>()
-                .Property(e => e.ProductID)
-                .IsUnicode(false);
-
             modelBuilder.Entity<ORDERSTATU>()
                 .HasMany(e => e.ORDERs)
                 .WithOptional(e => e.ORDERSTATU)
                 .HasForeignKey(e => e.OrderStatusID);
-
-            modelBuilder.Entity<PRODUCT>()
-                .Property(e => e.ProductID)
-                .IsUnicode(false);
 
             modelBuilder.Entity<PRODUCT>()
                 .Property(e => e.ProductPrice)
@@ -61,16 +50,7 @@ namespace Models.EF
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<PRODUCT>()
-                .Property(e => e.CategoryID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PRODUCT>()
                 .HasMany(e => e.ORDERDETAILs)
-                .WithOptional(e => e.PRODUCT)
-                .WillCascadeOnDelete();
-
-            modelBuilder.Entity<PRODUCT>()
-                .HasMany(e => e.PRODUCTDETAILs)
                 .WithOptional(e => e.PRODUCT)
                 .WillCascadeOnDelete();
 
@@ -78,14 +58,6 @@ namespace Models.EF
                 .HasMany(e => e.PRODUCTIMAGEs)
                 .WithOptional(e => e.PRODUCT)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<PRODUCTDETAIL>()
-                .Property(e => e.ProductID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PRODUCTIMAGE>()
-                .Property(e => e.ProductID)
-                .IsUnicode(false);
         }
     }
 }

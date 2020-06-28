@@ -51,7 +51,7 @@ namespace Models.DAO
             return list;
         }
 
-        public int Create(string ProductName, string ProductDescription, string ImageLink, string Category, decimal ProductPice)
+        public int Create(string ProductName, string ProductDescription, string ImageLink, int Category, decimal ProductPice)
         {
             object[] param =
             {
@@ -61,11 +61,11 @@ namespace Models.DAO
                 new SqlParameter("@Category", Category),
                 new SqlParameter("@ProductPice", ProductPice)
             };
-            int res = context.Database.ExecuteSqlCommand("Sp_Product_Insert @ProductName, @ProductDescription, @ImageLink, @Category, @ProductPice", param);
-            return res;
+            int res1 = context.Database.ExecuteSqlCommand("Sp_Product_Insert @ProductName, @ProductDescription, @ImageLink, @Category, @ProductPice", param);
+            return res1;
         }
 
-        public int Edit(int id, string ProductName, string ProductDescription, string ImageLink, string Category, decimal ProductPice)
+        public int Edit(int id, string ProductName, string ProductDescription, string ImageLink, int Category, decimal ProductPice)
         {
             object[] parameters =
             {

@@ -35,7 +35,7 @@ namespace ThucTapNhom.Areas.Admin.Controllers
                     var model = new ProductModel();
                     int res = model.Create(collection.ProductName, collection.ProductDescription, collection.ShowImage_1, collection.CategoryID, collection.ProductPrice);
                     if (res > 0)
-                        return RedirectToAction("Product");
+                        return RedirectToAction("Product","Home");
                     else
                     {
                         ModelState.AddModelError("", "Them moi err");
@@ -69,7 +69,7 @@ namespace ThucTapNhom.Areas.Admin.Controllers
                     var model = new ProductModel();
                     int res1 = model.Edit(id, collection.ProductName, collection.ProductDescription, collection.ShowImage_1, collection.CategoryID, collection.ProductPrice);
                     if (res1 > 0)
-                        return RedirectToAction("Product");
+                        return RedirectToAction("Product","Home");
                     else
                     {
                         ModelState.AddModelError("", "Edit err");
@@ -100,7 +100,7 @@ namespace ThucTapNhom.Areas.Admin.Controllers
                     var model = new ProductModel();
                     int res = model.Delete(id);
                     if (res > 0)
-                        return RedirectToAction("Product");
+                        return RedirectToAction("Product","Home");
                     else
                     {
                         ModelState.AddModelError("", "Delete err");
@@ -112,6 +112,20 @@ namespace ThucTapNhom.Areas.Admin.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Details(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            PRODUCT pRODUCT = db.PRODUCTs.Find(id);
+            if (pRODUCT == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pRODUCT);
         }
 
     }

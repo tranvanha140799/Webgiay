@@ -65,11 +65,14 @@
     <Compile Include="EF\PRODUCTIMAGE.cs" />
     <Compile Include="EF\ShopDbContext.cs" />
     <Compile Include="EF\SIZE.cs" />
+    <Compile Include="EF\sysdiagram.cs" />
     <Compile Include="EF\USER.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
